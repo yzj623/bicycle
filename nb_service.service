@@ -1,0 +1,12 @@
+[Unit]
+Description=UWSGI Service for NB
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/data/www/qanda
+ExecStart=/envs/nb/bin/uwsgi --ini nb_uwsgi.ini
+Restart=always
+
+[Install]
+WantedBy=multi - user.target
