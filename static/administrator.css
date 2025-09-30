@@ -1,0 +1,132 @@
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: #F6F6F6;
+}
+
+/* #region头部导航条 */
+.headnav .navimg {
+    width: 50px;
+    height: 50px;
+}
+
+.headnav .username {
+    font-size: 16px;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.headnav button {
+    margin-left: 5px;
+    padding: 3px 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #A164FE;
+    width: 90px;
+    height: 40px;
+    color: white;
+}
+
+/* #endregion头部导航条*/
+/* #region 需求展示区域 */
+.requirementarea .text {
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.requirementarea .weekday {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    margin-left: 400px;
+    font-size: 20px;
+}
+
+.requirementarea .class {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+.requirementarea .search {
+    margin-left: 100px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.requirementarea .container {
+    width: 600px;
+    height: 300px;
+    overflow: auto;
+    border: 2px solid black;
+}
+
+.requirementarea .container .piece {
+    border-bottom: 2px solid black;
+    overflow: visible;
+    background-color: rgb(71, 159, 206);
+}
+
+.requirementarea .container .start {
+    overflow: auto;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(71, 159, 206);
+    font-size: 20px;
+}
+
+.requirementarea .container .end {
+    overflow: auto;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(71, 159, 206);
+    font-size: 20px;
+}
+
+.requirementarea .container .num {
+    overflow: auto;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(71, 159, 206);
+    font-size: 20px;
+}
+
+.requirementarea .container .namelist {
+    text-align: center;
+    width: 600px;
+    max-height: 200px;
+    background-color: #F6F6F6;
+    overflow: visible;
+    display: none;
+    transition: all 1s linear;
+}
+
+.piece:hover .namelist {
+    display: inline-block;
+}
+
+
+
+.requirementarea .container .namelist .name {
+    width: 600px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* #endregion 需求展示区域 */

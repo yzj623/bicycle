@@ -1,0 +1,133 @@
+{% extends "adminbase.html" %}
+{% block mapsource %}
+    <script type="text/javascript" src="//api.map.baidu.com/getscript?type=webgl&v=1.0&ak=6Vaq5su1gzMkGnCXRiUROhnmhXo8vCuC"></script>
+{% endblock %}
+{% block body %}
+    <span class="datetime">行程日期</span>
+    <button class="datatime-s" type="button">上一周</button>
+    <div  class="datetime">
+    </div>
+    <button class="datatime-x" type="button">下一周</button>
+    <br>
+    <div class="search">
+    <span class="begintext">起点：</span>
+        <select class="begin">
+                <option value="default">不筛选</option>
+                <option value="中舍一区">中区宿舍一区（2，3，4号楼）</option>
+				<option value="中舍二区">中区宿舍二区（1，5，6号楼）</option>
+				<option value="中食堂">中区桃李苑</option>
+				<option value="东一教">东区一教</option>
+                <option value="东二教">东区二教</option>
+                <option value="东五教">东区五教</option>
+                <option value="东图">东区图书馆</option>
+                <option value="东操">东区运动场</option>
+                <option value="东苑">东区东苑餐厅</option>
+                <option value="东理化">东区理化大楼</option>
+                <option value="东医院">东区校医院</option>
+                <option value="东舍一区">东区宿舍一区（320，321）</option>
+                <option value="东舍二区">东区宿舍二区（322，323）</option>
+                <option value="东礼">东区大礼堂</option>
+                <option value="西图">西区图书馆</option>
+                <option value="西三教">西区三教（A，B，C）</option>
+                <option value="西舍一区">西区宿舍一区（4，5号楼，西活）</option>
+                <option value="西舍二区">西区宿舍二区（1，2，3，6号楼）</option>
+                <option value="西食堂">西区学生食堂（金桔园）</option>
+            </select>
+        终点 ：<select class="end">
+                <option value="default">不筛选</option>
+                <option value="中舍一区">中区宿舍一区（2，3，4号楼）</option>
+				<option value="中舍二区">中区宿舍二区（1，5，6号楼）</option>
+				<option value="中食堂">中区桃李苑</option>
+				<option value="东一教">东区一教</option>
+                <option value="东二教">东区二教</option>
+                <option value="东五教">东区五教</option>
+                <option value="东图">东区图书馆</option>
+                <option value="东操">东区运动场</option>
+                <option value="东苑">东区东苑餐厅</option>
+                <option value="东理化">东区理化大楼</option>
+                <option value="东医院">东区校医院</option>
+                <option value="东舍一区">东区宿舍一区（320，321）</option>
+                <option value="东舍二区">东区宿舍二区（322，323）</option>
+                <option value="东礼">东区大礼堂</option>
+                <option value="西图">西区图书馆</option>
+                <option value="西三教">西区三教（A，B，C）</option>
+                <option value="西舍一区">西区宿舍一区（4，5号楼，西活）</option>
+                <option value="西舍二区">西区宿舍二区（1，2，3，6号楼）</option>
+                <option value="西食堂">西区学生食堂（金桔园）</option>
+            </select>
+        时间：
+        <select class="weekday">
+            <option value="1">星期一</option>
+            <option value="2">星期二</option>
+            <option value="3">星期三</option>
+            <option value="4">星期四</option>
+            <option value="5">星期五</option>
+        </select>
+        <select class="time">
+        <option value="1">6：30</option>
+        <option value="2">7：20</option>
+        <option value="3">9：25</option>
+        <option value="4">11：20</option>
+        <option value="5">12：00</option>
+        <option value="6">13：40</option>
+        <option value="7">15：35</option>
+        <option value="8">17：30</option>
+        <option value="9">18：00</option>
+        <option value="10">19：10</option>
+        <option value="11">21：00</option>
+            </select>
+    <img class="search" src="{{ url_for("static",filename="images/searchicon.png") }}">
+    </div>
+    <div class="listname">
+    <span>
+        起点
+    </span>
+    <span>
+        终点
+    </span>
+    <span>
+        申请人数(点击展开)
+    </span>
+    </div>
+            <div class="tablebox">
+              {% if finallist %}
+                    {% for final_item in finallist %}
+                        <div class="final_item">
+                            <div>{{ final_item.orig }}</div>
+                            <div>{{ final_item.dest }}</div>
+                            <div class="popu">{{ final_item.length }}</div>
+                            <div class="userlist">
+                                {% for useritem in final_item.users %}
+                                    <div class="userlist_item">申请用户：{{ useritem }}</div>
+                                    {% endfor %}
+                            </div>
+                        </div>
+                  {% endfor %}
+              {% endif %}
+                <div class="default">暂无更多数据</div>
+            </div>
+
+
+     
+{% endblock %}
+{% block css %}
+    "{{ url_for("static",filename="adminbase_search.css") }}"
+{% endblock %}
+{% block js %}
+    "{{ url_for("static",filename="adminbase_search.js") }}"
+{% endblock %}
+{% block script %}
+    {% if week%}
+    const admin_weekpy="{{ week }}"
+    const admin_weekdaypy="{{ weekday }}"
+    const admin_timepy="{{ time }}"
+    const admin_origpy="{{ origplace }}"
+    const admin_destpy="{{ destplace }}"
+    {% else %}
+    const admin_weekpy=null
+    const admin_weekdaypy=null
+    const admin_timepy=null
+    const admin_origpy=null
+    const admin_destpy=null
+    {% endif %}
+{% endblock %}

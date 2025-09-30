@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ustcbike</title>
+    <link rel="stylesheet" href="{{ url_for("static",filename="reset.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static",filename="newindex.css") }}">
+    <link rel="icon" href="{{ url_for("static",filename="images/favicon.ico")}}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for("static",filename="images/ustcday.jpg") }}" class="ustcday"><img src="{{ url_for("static",filename="images/ustcnight.jpg") }}" class="ustcnight">
+        <div class="formbox">
+            <form class="login_form" >
+            <div class="title">中国科大校园共享单车管理系统</div>
+            <input type="text" placeholder="请输入邮箱" class="login_email">
+            <input type="password" placeholder="请输入密码" class="login_password">
+                <div class="reminder">用户名或密码错误</div>
+            <a class="goto_findback">忘记密码？找回密码</a>
+            <button type="button" class="login_button">登录</button>
+            <a class="goto_register">没有账号？去注册</a>
+            </form>
+            <form class="register_form changecolor" method="post" target='iframe'>
+                <div class="title">注册新账号</div>
+                <input type="text" placeholder="请输入邮箱" class="register_email" name="email">
+                <input type="text" placeholder="请输入验证码" class="register_captcha" name="captcha">
+                <button type="button" class="send_captcha">发送验证码</button>
+                <div class="reminder re_captchareminder">验证码错误</div>
+                <input type="text" class="register_username" placeholder="请输入用户名" name="username">
+                <div class="re_userreminder reminder">用户名长度必须为3到10个字符</div>
+                <input type="password" placeholder="请输入密码" class="register_password" name="password">
+                <div class="re_pwdreminder reminder">密码长度必须为6到20个字符</div>
+                <input type="password" placeholder="请再次输入密码" class="register_comfirmpwd">
+                <div class="re_confirmreminder reminder">两次输入的密码不一致</div>
+                <button type="button" class="registerbtn">注册</button>
+                <a class="goto_login">已有账号？前往登录</a>
+                <button type="submit" class="submit"></button>
+            </form>
+            <div class="svgbox">
+                <svg width="370" height="350" >
+                <circle fill="none" stroke="#68E534" stroke-width="15" cx="185" cy="175" r="124" class="circle"
+                stroke-linecap="round" transform="rotate(-90,185,175)" />
+                <polyline fill="none" stroke="#68E534" stroke-width="18" points="110,185 165,235 260,135" stroke-linecap="round"
+                stroke-linejoin="round" class="tick" />
+                </svg>
+                <h2>注册成功！点击进行登录</h2>
+            </div>
+            <form class="findback_form" >
+                <div class="animation"><span>修改成功</span><img src="{{ url_for("static",filename="images/tickle.png") }}"></div>
+                <div class="title">找回密码</div>
+                <input type="text" class="findback_email" placeholder="请输入邮箱" name="email">
+                <input type="text" placeholder="请输入验证码" class="findback_captcha" name="captcha">
+                <button type="button" class="send_captcha">发送验证码</button>
+                <div class="reminder fi_captchareminder">验证码错误</div>
+                <input type="text" class="findback_username" placeholder="请输入用户名" name="username">
+                <div class="fi_userreminder reminder">用户名长度必须为3到10个字符</div>
+                <input type="password" placeholder="请输入新密码" class="findback_password" name="password">
+                <div class="fi_pwdreminder reminder">密码长度必须为6到20个字符</div>
+                <input type="password" placeholder="请再次输入密码" class="findback_confirmpwd">
+                <div class="fi_confirmreminder reminder">两次输入的密码不一致</div>
+                <button type="button" class="change">确认修改</button>
+                <a class="goto_login">前往登录</a>
+            </form>
+            <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <script src="{{ url_for("static",filename="jquery/jquery.3.6.min.js") }}"></script>
+    <script src="{{ url_for("static",filename="newindex.js") }}"></script>
+</body>
+</html>

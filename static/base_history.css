@@ -1,0 +1,76 @@
+nav div.animation{
+    left: 100px;
+    background-color: rgba(220,218,148,0.8);
+}
+div.tablebox{
+      border-radius: 3px;
+    width: 723px;
+    height: 400px;
+    overflow-y: auto;
+    position: relative;
+     margin: 0px auto 40px auto;
+     color: white;
+    text-align: center;
+    border: 1px white solid;
+}
+
+td{
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    font-family: fangsong;
+}
+td:nth-child(4){
+    width: 120px;
+}
+td button{
+    width: 50px;
+    height: 30px;
+}
+td button.edit{
+    background-color: rgba(139,220,181,0.7);
+    color: white;
+    border-radius: 3px;
+}
+td button.delete{
+    background-color: rgba(220,44,51,0.7);
+    color: white;
+    border-radius: 3px;
+}
+tr.items{
+    background-color: rgba(204,255,238,0.36);
+    color: black;
+}
+div.listname{
+    margin: 20px auto 0px auto;
+    width: 723px;
+    color: white;
+    font-family:fangsong;
+    font-size: 20px;
+}
+div.listname span{
+    margin-right: 110px;
+}
+div.listname span:nth-child(4){
+    margin-right: 0px;
+}
+div.listname span:nth-child(3){
+    margin-right: 130px;
+}
+div.default{
+    width: 723px;
+    height: 50px;
+    font-family: fangsong;
+    font-size: 20px;
+}
+
+{
+    scrollbar-width: none ;
+    -ms-overflow-style: none; /* IE 10+ */
+
+}
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+

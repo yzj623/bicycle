@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>找回密码</title>
+    <link rel="stylesheet" href="{{ url_for("static",filename="reset.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static",filename="findback.css") }}">
+
+</head>
+<body>
+<form action="">
+    <img src="{{ url_for("static",filename="images/ustclogo.jpg") }}" alt="logo" class="logo">
+    <input type="text" placeholder="请输入待找回密码的邮箱" class="email">
+    <input type="text" placeholder="请输入收到的验证码" class="captcha">
+    <button class="send_captcha" type="button">发送验证码</button>
+    <div class="reminder captchareminder">验证码错误</div>
+    <input type="password" placeholder="请输入新密码" class="pwd">
+    <div class="pwdreminder reminder">密码长度必须为6到20个字符</div>
+    <input type="password" placeholder="请再次输入新密码" class="confirmpwd">
+    <div class="confirmreminder reminder">两次输入的密码不一致</div>
+    <button class="submit" type="button">确认修改</button>
+</form>
+
+
+
+
+
+
+    <script src="{{ url_for("static",filename="jquery/jquery.3.6.min.js") }}"></script>
+    <script src="{{ url_for("static",filename="findback.js") }}"></script>
+</body>
+</html>

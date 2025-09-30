@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block css %}
+    "{{ url_for("static",filename="base_map.css") }}"
+{% endblock %}
+{% block js %}
+    "{{ url_for("static",filename="base_map.js") }}"
+{% endblock %}
+{% block body %}
+    <div id="mapcontainer"></div>
+{% endblock %}
+{% block mapsource %}
+    <script type="text/javascript" src="//api.map.baidu.com/getscript?type=webgl&v=1.0&ak=6Vaq5su1gzMkGnCXRiUROhnmhXo8vCuC"></script>
+{% endblock %}
+{% block  script%}
+    const bikedict={{ bikedict|tojson }}
+{% endblock %}

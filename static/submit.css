@@ -1,0 +1,87 @@
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: #F4F4F4;
+}
+
+/* #region头部导航条 */
+.headnav .username {
+    display: inline-block;
+    line-height: 50px;
+}
+
+.headnav .navimg {
+    width: 50px;
+    height: 50px;
+}
+
+.headnav .container {
+
+    background-color: #F2F0F5;
+    color: rgb(72, 35, 176);
+    height: 50px;
+}
+
+.headnav span {
+    line-height: 50px;
+}
+
+.headnav .return {
+    margin-left: 5px;
+    padding: 3px 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #A164FE;
+    width: 90px;
+    height: 40px;
+    color: white;
+}
+
+/* #endregion头部导航条*/
+
+
+/* #region 提交行程区域 */
+.submitarea table {
+    width: 1000px;
+}
+
+.submitarea table td,
+.submitarea table th {
+    text-align: center;
+    height: 50px;
+    width: 200px;
+}
+
+.submitarea table td {
+    height: 100px;
+}
+
+.submitarea table button {
+    background-color: green;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+}
+
+.submitarea .choice {
+    display: none;
+}
+
+.open+.choice {
+    display: block;
+}
+
+.submitarea .upload {
+    width: 200px;
+    height: 60px;
+    background-color: skyblue;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.submitarea {
+    text-align: center;
+}
+
+/* #endregion提交行程区域*/

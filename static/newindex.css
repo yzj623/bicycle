@@ -1,0 +1,394 @@
+.container{
+    margin: 30px auto;
+    width: 1200px;
+    position: relative;
+}
+.ustcday{
+    width: 600px;
+    height: 700px;
+    display: inline-block;
+    font-size: 0px;
+    filter: brightness(1.25);
+    transition: filter 0.5s;
+}
+.ustcnight{
+    width: 600px;
+    height: 700px;
+    display: inline-block;
+    font-size: 0px;
+    filter: blur(3px);
+    transition: filter 0.5s;
+}
+.formbox{
+    position: absolute;
+    top: 135px;
+    right:115px;
+    border-radius: 10px;
+    width: 370px;
+    height: 410px;
+}
+form{
+    overflow: hidden;
+
+}
+/*所有的表单都不进行继承margin*/
+form.login_form{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    width: 370px;
+    height: 410px;
+    color: white;
+    box-shadow: 0 0 7px white;
+}
+form.login_form input{
+    background-color: transparent;
+    width: 250px;
+    height: 30px;
+    margin-left: 15%;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 17px;
+    font-family: fangsong;
+}
+form.login_form input:focus{
+    box-shadow: 0 0 7px white;
+}
+::-webkit-input-placeholder{
+    color: white;
+}
+.changecolor input::-webkit-input-placeholder{
+    color: black;
+}
+form.login_form .login_email{
+    margin-top: 20%;
+}
+form.login_form .login_password{
+    margin-top: 10%;
+}
+form.login_form .title {
+    font-size: 26px;
+    font-family: fangsong;
+}
+
+form.login_form .login_button{
+    display: inline-block;
+    width: 120px;
+    height: 45px;
+    border-radius: 7px;
+    margin-top: 8%;
+    margin-left: 19%;
+   background-color: rgba(88,255,250,0.49);
+}
+form.login_form a{
+    display: inline-block;
+    text-decoration: underline solid white;
+    color: white;
+    font-size: 13px;
+    margin-left: 34%;
+    margin-top: 25px;
+}
+form.login_form a:hover{
+   color: white;
+    cursor: pointer;
+}
+form.login_form .goto_register{
+    margin-left: 2%;
+}
+form.login_form .login_button:hover{
+    box-shadow: 0 0 7px white;
+}
+form.register_form{
+    display: none;
+    border-radius: 10px;
+    width: 370px;
+    height: 410px;
+    color: black;
+    box-shadow: 0 0 7px black;
+
+}
+form.register_form input{
+    background-color: transparent;
+    width: 250px;
+    height: 30px;
+    margin-left: 15%;
+    border-bottom: 2px solid black;
+    color: black;
+    font-size: 17px;
+    font-family: fangsong;
+}
+form.register_form input.register_email{
+    margin-top: 4px;
+}
+form.register_form .title{
+    font-weight: bold;
+    width: 36%;
+    display: block;
+    font-size: 26px;
+    font-family: fangsong;
+    margin: 20px auto 0px auto;
+}
+form.register_form input:focus{
+    box-shadow: 0 0 7px black;
+}
+form.register_form input{
+    margin-top: 20px;
+}
+form.register_form input.register_captcha{
+    width: 150px;
+}
+form.register_form .send_captcha{
+    border-radius: 4px;
+    width: 100px;
+    height: 35px;
+    vertical-align: bottom;
+    font-family: fangsong;
+    font-size: 16px;
+    box-shadow: 0 0 7px black;
+    font-weight: bold;
+}
+form.register_form .send_captcha:hover{
+     box-shadow: 0 0 7px white;
+}
+form.register_form .registerbtn{
+    margin-top: 35px;
+    margin-left: 55px;
+    border-radius: 6px;
+    width: 130px;
+    height: 42px;
+    font-family: fangsong;
+    font-size: 16px;
+    background-color: rgba(114,179,255,0.49);
+    box-shadow: 0 0 7px black;
+    font-weight: bold;
+}
+form.register_form .registerbtn:hover{
+    box-shadow: 0 0 7px white;
+}
+form.register_form .goto_login{
+    font-size: 13px;
+    color: black;
+    text-decoration: underline solid black;
+    cursor: pointer;
+}
+form.register_form .goto_login:hover{
+    color: black;
+}
+form.register_form .submit{
+    display: none;
+}
+
+form.findback_form{
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 9px;
+    width: 370px;
+    height: 410px;
+    color: white;
+    box-shadow: 0 0 6px white;
+    position: relative;
+}
+form.findback_form div.animation{
+    background-color: #F2F0F5;
+    z-index: 100;
+    position: absolute;
+    width: 105px;
+    height: 40px;
+    top: -48px;
+    left: 135px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 17px white;
+}
+form.findback_form div.animation span{
+    text-align: center;
+    display: inline-block;
+    width: 75px;
+    height: 40px;
+    vertical-align: bottom;
+    line-height: 40px;
+    font-family: fangsong;
+    color: black;
+    font-size: 16px;
+}
+form.findback_form div.animation img{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+form.findback_form div.title{
+    font-weight: bold;
+    width: 104px;
+    display: block;
+    font-size: 26px;
+    font-family: fangsong;
+    margin: 20px auto 0px auto;
+}
+form.findback_form input{
+     background-color: transparent;
+    width: 250px;
+    height: 30px;
+    margin-left: 15%;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 17px;
+    font-family: fangsong;
+}
+::-webkit-input-placeholder{
+    color: white;
+}
+form.findback_form input:focus{
+    box-shadow: 0 0 7px white;
+}
+form.findback_form input.findback_email{
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+form.findback_form input.findback_captcha{
+    width: 145px;
+}
+form.findback_form .send_captcha{
+    border-radius: 4px;
+    width: 100px;
+    height: 35px;
+    vertical-align: bottom;
+    font-family: fangsong;
+    font-size: 16px;
+    box-shadow: 0 0 7px black;
+    font-weight: bold;
+}
+
+form.findback_form input.findback_password{
+    margin-top: 20px;
+}
+form.findback_form input.findback_confirmpwd{
+    margin-top: 20px;
+}
+form.findback_form input.findback_username{
+    margin-top: 20px;
+}
+form.findback_form button.change{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 87px;
+    background-color: rgba(84,220,183,0.7);
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px white;
+    font-family: cursive;
+    font-size: 17px;
+    color: white;
+}
+
+form.findback_form button.change:hover{
+    box-shadow: 0px 0px 5px white;
+}
+
+
+form.findback_form a.goto_login{
+    display: inline-block;
+    width: 100px;
+    margin-left: 30px;
+    text-decoration: underline solid white;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+
+
+
+form .reminder{
+    color:red;
+    font-size: 13.34px;
+    margin-left: 55px;
+    display: none;
+}
+
+.formbox .svgbox{
+    width: 370px;
+    height: 410px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+     background-color: black;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.formbox .svgbox h2{
+    font-family: cursive;
+}
+ .circle {
+            stroke-dasharray: 974;
+            stroke-dashoffset: 974;
+            /*animation: circle 1s ease-in-out;*/
+            /*animation-fill-mode: forwards;*/
+        }
+.tick {
+            stroke-dasharray: 260;
+            stroke-dashoffset: 260;
+            /*animation: tick 0.8s ease-out;*/
+            /*animation-fill-mode: forwards;*/
+            /*animation-delay: 0.95s;*/
+        }
+
+
+div.animation{
+    /*animation: move 2.5s ease-in-out;
+    animation-fill-mode: forwards;*/
+}
+@keyframes move {
+    0%{
+        top: -48px;
+    }
+    50%{
+        top: 40px;
+    }
+    100%{
+        top: -48px;
+    }
+}
+@keyframes circle {
+            from {
+                stroke-dasharray: 974;
+                stroke-dashoffset: 974;
+            }
+
+            to {
+                stroke-dasharray: 974;
+                stroke-dashoffset: 1948;
+            }
+        }
+
+@keyframes tick {
+            from {
+                stroke-dasharray: 260;
+                stroke-dashoffset: 260;
+            }
+
+            to {
+                stroke-dasharray: 260;
+                stroke-dashoffset: 0;
+            }
+        }
+@keyframes title {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.svgbox h2{
+    display: block;
+    width: 370px;
+    height: 60px;
+    text-align: center;
+    opacity: 0;
+    font-size: 20px;
+    /* line-height: 0; */
+    color: white;
+    text-shadow: 1px 1px 5px white;
+}

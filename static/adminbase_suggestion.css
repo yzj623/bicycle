@@ -1,0 +1,127 @@
+nav .animation{
+    left: 200px;
+     background-color: rgba(183,124,220,0.8);
+}
+div.reminder{
+   margin: 0px auto;
+    width: 430px;
+    height: 40px;
+   font-family: cursive;
+    color: black;
+    font-size: 15px;
+    background-color: rgba(38,220,211,0.5);
+    text-align: center;
+    border-radius: 6px;
+
+}
+div.mainarea{
+    margin: 0px auto;
+    width: 500px;
+    height: 400px;
+    box-shadow: 0px 0px 3px white;
+    overflow: auto;
+}
+div.listname{
+    margin: 20px auto 0px auto;
+    width: 500px;
+    height: 25px;
+    overflow: hidden;
+}
+div.listname span{
+    display: inline-block;
+    width: 80px;
+    height: 25px;
+    font-family: cursive;
+    font-size: 18px;
+    vertical-align: bottom;
+    color: black;
+    font-weight: revert;
+}
+div.listname span:nth-child(2){
+    margin-left:115px;
+}
+div.listname span:nth-child(3){
+    margin-left: 117px;
+}
+
+
+div.suggestion{
+    width: 500px;
+    height: 40px;
+    background-color: rgba(220,217,220,0.8);
+}
+
+div.suggestion div.orig{
+    display: inline-block;
+    width: 199px;
+    height: 40px;
+    border-right: 1px solid #75a7dc;
+    font-family: cursive;
+    font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+}
+div.suggestion div.dest{
+
+    display: inline-block;
+    width: 199px;
+    height: 40px;
+    font-size: 15px;
+    font-family: cursive;
+    color: black;
+    text-align: center;
+    border-right: 1px solid #75a7dc;
+    line-height: 40px;
+}
+div.suggestion div.num{
+
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    font-family: fangsong;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+}
+ div.default{
+    width: 500px;
+     height: 50px;
+     font-size: 18px;
+     font-family: cursive;
+     text-align: center;
+     color: azure;
+
+}
+ div.announcebox{
+     width: 350px;
+     height: 40px;
+     margin: 10px auto;
+     overflow: hidden;
+     background-color: rgba(218,220,218,0.7);
+     border-radius: 3px;
+
+ }
+ div.announcebox span{
+    margin-left: 0px;
+    display: inline-block;
+     height: 40px;
+     width: 1000px;
+     line-height: 40px;
+     color: cornsilk;
+     font-size: 16px;
+     font-weight: bold;
+     font-family: fangsong;
+     animation-name: marquee;
+     animation-duration: 8s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+ }
+ @keyframes marquee {
+     0%{
+         margin-left: 0px;
+     }
+     100%{
+         margin-left: -592px;
+     }
+ }

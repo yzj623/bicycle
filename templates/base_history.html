@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block css %}
+    "{{ url_for("static",filename="base_history.css") }}"
+{% endblock %}
+{% block js %}
+    "{{ url_for("static",filename="base_history.js") }}"
+{% endblock %}
+{% block body %}
+    <div class="listname">
+    <span>
+        提交时间
+    </span>
+    <span>
+        行程日期
+    </span>
+    <span>
+        提交人
+    </span>
+    <span>
+        操作
+    </span>
+    </div>
+<div class="tablebox">
+<table>
+  <tbody>
+    {% for item in list %}
+    	<tr class="items">
+            <td>{{ item.submittime }}</td>
+            <td>{{ item.time }}</td>
+            <td>{{ user.username }}</td>
+            <td>
+                <button type="button" class="edit">编辑</button>
+                <button type="button" class="delete">删除</button>
+            </td>
+        </tr>
+    {% endfor %}
+  </tbody>
+  <colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+</table>
+    <div class="default">暂无更多数据</div>
+</div>
+
+
+
+
+
+
+{% endblock %}

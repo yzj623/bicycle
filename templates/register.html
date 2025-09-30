@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for("static",filename="reset.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static",filename="register.css") }}">
+</head>
+
+<body>
+
+    <form method="post" action="#">
+        <div class="topline"></div>
+        <img src="{{ url_for("static",filename="images/ustclogo.jpg") }}" alt="logo" class="logo">
+        <div class="text">
+            共享单车管理系统账号注册
+        </div>
+        <input class="email" type="text" placeholder="请输入您的邮箱地址" name="email">
+        <br>
+        <input class="captcha"  type="text" placeholder="请输入验证码" name="captcha">
+        <button class="send_captcha" type="button">发送验证码</button>
+        <div class="reminder captchareminder">验证码错误</div>
+        <input class="account" type="text" placeholder="请输入用户名" name="username">
+         <div class="userreminder reminder">用户名长度必须为3到10个字符</div>
+        <input class="pwd" type="password" placeholder="请输入密码" name="password">
+         <div class="pwdreminder reminder">密码长度必须为6到20个字符</div>
+        <input class="confirmpwd" type="password" placeholder="请再次输入密码" name="confirm_password">
+{#        <img class="eyes" src="{{ url_for("static",filename="images/不可视.png") }}" alt="不可视">#}
+        <div class="confirmreminder reminder">两次输入的密码不一致</div>
+        <button type="button" class="signup">注册</button>
+        <button type="button" class="return" onclick="window.location.href='./index'">返回登录界面</button>
+    </form>
+    <script src="{{ url_for("static",filename="jquery/jquery.3.6.min.js") }}"></script>
+{#    <script src="{{ url_for("static",filename="index.js") }}"></script>#}
+    <script src="{{ url_for("static",filename="register.js") }}"></script>
+</body>
+
+</html>

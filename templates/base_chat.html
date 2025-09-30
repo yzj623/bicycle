@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block css %}
+    "{{ url_for("static",filename="base_chat.css") }}"
+{% endblock %}
+{% block js %}
+    "{{ url_for("static",filename="base_chat.js") }}"
+{% endblock %}
+{% block body %}
+     <div class="popwindow">
+        <img src="{{ url_for("static",filename="images/closeicon.png")}}" class="closeicon">
+    <div class="commenthead"></div>
+        <div class="commenttext"></div>
+    <div class="tocommentid" style="display: none"></div>
+         <div class="replyhead"></div>
+        <div class="replytext"></div>
+         <div class="idbox" style="display: none"></div>
+     <button type="button" class="confirm">确认并删除</button>
+    </div>
+    <div class="mainarea">
+        <div class="leftlist">
+            <div class="writebox selected">
+                <img class="write" src="{{ url_for("static",filename="images/writeicon.png")}}">
+            </div>
+           <div class="emailbox">
+                <img class="email" src="{{ url_for("static",filename="images/emailicon.png")}}">
+           </div>
+        </div>
+        <div class="midarea">
+            <div class="writeareabox">
+            <div class="background_send">
+                <div class="text_head">
+                <span class="head_1">向</span>
+                    <select class="suggest">
+                        <option value="web">网站作者</option>
+                        <option value="admin">单车调度员</option>
+                    </select>
+                <span class="head_2">提出建议</span>
+                </div>
+                <textarea maxlength="200" placeholder="请在此处输入建议"></textarea>
+                <span class="codecount">0/200字</span>
+                <div class="submitbox">
+                    <button class="submitbtn">提交建议</button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            </div>
+            <div class="emailareabox" style="display: none">
+                    <div class="emailarea">
+                        {% for replyitem in replylist %}
+                        <div class="reply">
+                            <img class="emailicon" src= "{{ url_for("static",filename="images/emailicon.png")}}">
+                            <div class="sendername">来自调度员:{{ replyitem.sendername }}</div>
+                            {% if replyitem.isread=="not" %}
+                            <div class="notread read">未读消息</div>
+                            {% else %}
+                            <div class="isread read">已读</div>
+                            {% endif %}
+                            <div class="time">{{ replyitem.time }}</div>
+                            <div class="replyid" style="display: none">{{ replyitem.id }} </div>
+                            <div class="tocommentid" style="display: none">{{ replyitem.tocommentid }}</div>
+                            </div>
+
+                        {% endfor %}
+                    <div class="default">暂无更多消息</div>
+                    </div>
+            </div>
+        </div>
+        <div class="rightlist">
+            {% for admin in adminlist %}
+                <div class="admin">
+                    调度员：{{ admin.username }}
+                    <span style="display: none">{{ admin.id }}</span>
+                </div>
+                <div class="default">
+                点击选择发送对象
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    const userid={{ g.user.id }}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "adminbase.html" %}
+{% block mapsource %}
+    <script type="text/javascript" src="//api.map.baidu.com/getscript?type=webgl&v=1.0&ak=6Vaq5su1gzMkGnCXRiUROhnmhXo8vCuC"></script>
+{% endblock %}
+{% block css %}
+    "{{ url_for("static",filename="adminbase_suggestion.css") }}"
+{% endblock %}
+{% block js %}
+    "{{ url_for("static",filename="adminbase_suggestion.js") }}"
+{% endblock %}
+{% block body %}
+    <div class="reminder">
+    通过当天各地的车况，以及当天各地的需求量，给出向各处调度的建议。如需修改车况，请在“更新车况”板块中操作。
+    </div>
+    <div class="announcebox">
+    <span>由于今天是周末，周末的行程系统没有考虑，因此生成的建议是下周一的调度建议。由于今天是周末，周末的行程系统没有考虑，因此生成的建议是下周一的调度建议。</span>
+    </div>
+    <div class="listname">
+    <span>
+        起点
+    </span>
+    <span>
+        终点
+    </span>
+    <span>
+        运输数量
+    </span>
+    </div>
+	<div class="mainarea">
+    {% for suggestion in suggestlist %}
+    <div class="suggestion"><div class="orig">{{ suggestion.orig }}</div><div class="dest">{{ suggestion.dest }}</div><div class="num">{{ suggestion.num }}</div></div>
+    {% endfor %}
+    <div class="default">暂无更多建议</div>
+    </div>
+{% endblock %}
+{% block script %}
+
+{% endblock %}

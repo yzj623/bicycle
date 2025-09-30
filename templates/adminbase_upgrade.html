@@ -1,0 +1,29 @@
+{% extends "adminbase.html" %}
+{% block mapsource %}
+    <script type="text/javascript" src="//api.map.baidu.com/getscript?type=webgl&v=1.0&ak=6Vaq5su1gzMkGnCXRiUROhnmhXo8vCuC"></script>
+{% endblock %}
+{% block body %}
+<div id="mapcontainer"></div>
+    <div class="upgrade">
+        <div class="placename">
+            请在地图上选择地点
+        </div>
+        <div class="inputbox">
+            <input type="text" oninput = "value=value.replace(/[^\d]/g,'')" placeholder="请输入该地点的单车数量">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <button type="button">更新</button>
+    </div>
+{% endblock %}
+{% block css %}
+    "{{ url_for("static",filename="adminbase_upgrade.css") }}"
+{% endblock %}
+{% block js %}
+    "{{ url_for("static",filename="adminbase_upgrade.js") }}"
+{% endblock %}
+{% block script %}
+    const bikedict={{ bikedict|tojson }}
+{% endblock %}

@@ -1,0 +1,97 @@
+body{
+    background: url("../static/images/body_background.png")  no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    //background-color: #2C3E50;
+    overflow: hidden;
+    position: relative;
+ 
+}
+nav{
+    margin: 70px auto;
+    position: relative;
+    width: 400px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 2px 2px 2px #000;
+}
+.user{
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    width: 150px;
+    height: 50px;
+    /*background-color: #34495e;*/
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #000;
+    line-height: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255,253,85,0.49);
+}
+.backout{
+    line-height: 50px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 150px;
+    height: 50px;
+    background-color:rgba(220,38,38,0);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #000;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+.backout:hover{
+    box-shadow: 4px 4px 4px #000;
+}
+nav a{
+    width: 100px;
+    height: 100%;
+    line-height: 50px;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all 0.5s ease 0s;
+    border-radius: 8px;
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+}
+a:nth-child(1):hover~.animation{
+    left: 0;
+    background-color: rgba(140,220,182,0.5);
+}
+a:nth-child(2):hover~.animation{
+    left: 100px;
+    background-color: rgba(220,218,148,0.5);
+}
+a:nth-child(3):hover~.animation{
+    left: 200px;
+    background-color: rgba(183,124,220,0.5);
+}
+a:nth-child(4):hover~.animation{
+    left: 300px;
+    background-color: rgba(73,72,220,0.5);
+}
+a:hover{
+    color: white;
+}

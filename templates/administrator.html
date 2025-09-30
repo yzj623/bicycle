@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for("static",filename="reset.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static",filename="administrator.css") }}">
+</head>
+
+<body>
+    <div class="headnav">
+        <div class="container clearfix">
+            <img class="navimg leftfix" src="{{ url_for("static",filename="images/管理员头像.png") }}"alt="头像">
+            <div class="username">
+                调度员,你好！
+            </div>
+            <button class="return rightfix">
+                返回登录界面
+            </button>
+        </div>
+    </div>
+    <div class="requirementarea">
+        <div class="text">行程需求检索</div>
+        <select class="weekday">
+            <option value="1">周一</option>
+            <option value="2">周二</option>
+            <option value="3">周三</option>
+            <option value="4">周四</option>
+            <option value="5">周五</option>
+        </select>
+        <select class="class">
+            <option value="1">第一节</option>
+            <option value="2">第二节</option>
+            <option value="3">第三节</option>
+            <option value="4">第四节</option>
+        </select>
+        <img src="{{ url_for("static",filename="images/搜索.png") }}" class="search" alt="搜索">
+        <div class="container">
+        </div>
+        <div class="result">
+        </div>
+    </div>
+    <script src="{{ url_for("static",filename="administrator.js") }}"></script>
+</body>
+
+</html>

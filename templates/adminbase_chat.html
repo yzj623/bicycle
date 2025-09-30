@@ -1,0 +1,49 @@
+{% extends "adminbase.html" %}
+{% block mapsource %}
+    <script type="text/javascript" src="//api.map.baidu.com/getscript?type=webgl&v=1.0&ak=6Vaq5su1gzMkGnCXRiUROhnmhXo8vCuC"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="popwindow">
+        <img src="{{ url_for("static",filename="images/closeicon.png")}}" class="closeicon">
+    <div class="sendername"></div>
+        <div class="text"></div>
+    <div class="commentid" style="display: none"></div>
+        <div class="senderidbox" style="display: none"></div>
+    <div class="inputbox">
+        <textarea maxlength="200" placeholder="回复建议后，该条建议将不再显示"></textarea>
+        <button type="button">回复</button>
+    </div>
+    </div>
+<div class="emailbox">
+    {% for comment in commentlist %}
+        <div class="comment">
+            <img class="emailicon" src= "{{ url_for("static",filename="images/emailicon.png")}}">
+            <div class="sender">
+            来自用户:{{ comment.sender }}
+                </div>
+            {% if comment.isread=="not" %}
+            <div class="notread read">未读消息</div>
+            {% else %}
+            <div class="isread read">已读</div>
+            {% endif %}
+            <div class="time">{{ comment.time }}</div>
+            <div class="commentid" style="display: none">{{ comment.id }}</div>
+            <div class="commentsenderid" style="display: none">{{ comment.senderid }}</div>
+        <div class="innertext" style="display: none">{{ comment.text }}</div>
+        </div>
+{% endfor %}
+<div class="default">
+    暂无更多消息
+</div>
+</div>
+{% endblock %}
+{% block css %}
+    "{{ url_for("static",filename="adminbase_chat.css") }}"
+{% endblock %}
+{% block js %}
+    "{{ url_for("static",filename="adminbase_chat.js") }}"
+{% endblock %}
+{% block script %}
+
+{% endblock %}

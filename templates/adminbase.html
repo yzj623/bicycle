@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <title>ustcbike</title>
+     <link rel="stylesheet" href="{{ url_for("static",filename="reset.css") }}">
+     <link rel="stylesheet" href="{{ url_for("static",filename="base.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static",filename="adminbase.css") }}">
+    <link rel="icon" href="{{ url_for("static",filename="images/favicon.ico")}}">
+    <link rel="stylesheet" href={% block css %}{% endblock %}>
+    {% block mapsource %}
+    {% endblock %}
+</head>
+<body>
+{% block fullscreen %}
+{% endblock %}
+    <div class="container">
+        <div class="user">
+            <img src="{{ url_for("static",filename="images/头像.png") }}" alt="加载失败">
+            {% if user%}
+                管理员：{{ user.username }}
+            {% endif %}
+        </div>
+        <nav>
+            <a href="/auth/admin">更新车况</a>
+            <a href="/auth/admin_search">搜索行程</a>
+            <a href="/auth/suggestion">调度建议</a>
+            <a href="/auth/admin_chat">用户反馈</a>
+            <div class="animation"></div>
+        </nav>
+        <button type="button" class="backout">退出登录</button>
+    {%block body%}
+    {% endblock %}
+    </div>
+   <script src="{{ url_for("static",filename="jquery/jquery.3.6.min.js") }}"></script>
+    <script>
+        backoutbtn=document.querySelector(".backout")
+        backoutbtn.addEventListener("click",function () {
+            $.ajax({
+                url: "/auth/backout"
+            })
+            window.location.href="/auth/newindex"
+        })
+    </script>
+    <script>
+        {% block script %}{% endblock %}
+    </script>
+    <script src={%block js %} {% endblock %}></script>
+</body>
+</html>
+
+

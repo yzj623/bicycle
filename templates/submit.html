@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for("static",filename="reset.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static",filename="submit.css") }}">
+    <link rel="shortcut icon" href="{{ url_for("static",filename="images/favicon.ico") }}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="headnav">
+        <div class="container clearfix">
+            <img class="navimg leftfix" src="{{ url_for("static",filename="images/头像.png") }}" alt="头像">
+            <div class="username"></div>
+
+            <button class="return rightfix" onclick="window.location.href='./index'">返回登录界面</button>
+            <div class="classselect rightfix">
+                <span>共享单车类型选择：</span>
+                <select>
+                    <option>美团单车</option>
+                    <option>哈啰单车</option>
+                    <option>青桔单车</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="submitarea">
+        <div class="container">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>周一</th>
+                        <th>周二</th>
+                        <th>周三</th>
+                        <th>周四</th>
+                        <th>周五</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="need11">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt11">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt11">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need12">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt12">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt12">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need13">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt13">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt13">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need14">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt14">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt14">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need15">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt15">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt15">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="need21">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt21">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt21">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need22">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt22">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt22">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need23">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt23">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt23">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need24">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt24">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt24">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need25">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt25">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt25">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="need31">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt31">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt31">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need32">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt32">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt32">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need33">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt33">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt33">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need34">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt34">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt34">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need35">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt35">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt35">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="need41">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt41">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt41">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need42">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt42">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt42">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need43">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt43">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt43">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need44">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt44">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt44">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="need45">无出行需求</button>
+                            <div class="choice">
+                                起始地：
+                                <select class="begin opt45">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                                <br>
+                                目的地：
+                                <select class="end opt45">
+                                    <option value="1">宿舍</option>
+                                    <option value="2">教学楼</option>
+                                    <option value="3">食堂</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="upload">提交行程</button>
+        </div>
+    </div>
+    <script src="{{ url_for("static",filename="submit.js") }}"></script>
+</body>
+
+</html>

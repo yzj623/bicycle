@@ -1,0 +1,88 @@
+.topline{
+    height: 30px;
+    background-color: green;
+    width: 0px;
+}
+form {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+form .logo{
+    width: 300px;
+    height: 60px;
+}
+form .text {
+    font-size: 24px;
+    text-align: center;
+
+}
+
+form input {
+    margin-left: 46px;
+    width: 200px;
+    height: 18px;
+    border-bottom: 1px solid blue;
+    margin-top: 20px;
+}
+form input.captcha{
+    width: 130px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+form input.account{
+    height: 20px;
+
+}
+form input.confirmpwd{
+    margin-bottom: 15px;
+}
+form span {
+    margin-left: 40px;
+}
+
+form select {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+form a {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+form button {
+    background-color: #0350A0;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    color: white;
+    display: block;
+    margin: 10px auto;
+
+}
+form .send_captcha{
+    background-color: rgba(159,91,255,0.1);
+    font-size: 10px;
+    width:70px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    color: #333333;
+    margin-bottom: 0px;
+}
+
+.eyes {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+/*管理提示语句*/
+form .reminder{
+    color:red;
+    font-size: 10px;
+    margin-left: 46px;
+    display: none;
+    margin-bottom: 5px;
+}

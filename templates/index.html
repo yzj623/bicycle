@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>中科大共享单车管理系统</title>
+    <link rel="stylesheet" href="{{ url_for("static",filename="reset.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static",filename="index.css") }}">
+    <link rel="shortcut icon" href="{{ url_for("static",filename="images/favicon.ico") }}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="{{ url_for("static",filename="images/头部.bmp") }}" alt="header">
+            <div class="text">
+                共享单车管理系统
+            </div>
+            <div class="english">
+                Shared Bicycles Management System
+            </div>
+        </div>
+    </div>
+    <div class="headnav">
+        <div class="container">
+
+        </div>
+    </div>
+    <div class="map">
+        <div class="container clearfix">
+            <a href="https://map.ustc.edu.cn/">
+                <img class="realmap leftfix" src="{{ url_for("static",filename="images/地图.png") }}" alt="地图">
+            </a>
+            <div class="form rightfix">
+                <form action="">
+                    <img src="{{ url_for("static",filename="images/ustclogo.jpg") }}" alt="logo" class="logo">
+                    <div class="text">
+                        共享单车管理系统身份认证
+                    </div>
+                    <input class="account" type="text" placeholder="请输入用户名" name="username">
+
+                    <input class="pwd" type="password" placeholder="请输入密码" name="pwd">
+
+                    <div class="reminder">用户名或密码错误</div>
+{#                    <img class="eyes" src="{{ url_for("static",filename="images/不可视.png") }}" alt="不可视">#}
+
+                    <a href="./findback">找回/修改密码？</a>
+                    <br>
+                    <button type="button" class="login">登录</button>
+                    <button type="button" onclick="window.location.href='./register'">注册</button>
+                </form>
+                <div class="slogin">
+
+                </div>
+                <button class="submit">提交行程</button>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <div class="container clearfix">
+            <div class="address leftfix" id="first">
+                地址：安徽省合肥市金寨路96号 中国科学技术大学
+            </div>
+            <div class="contact leftfix">
+                联系作者：
+            </div>
+            <div class="email leftfix">
+                yzj623@mail.ustc.edu.cn
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for("static",filename="jquery/jquery.3.6.min.js") }}"></script>
+    <script src="{{ url_for("static",filename="index.js") }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+nav .animation{
+    left: 100px;
+    background-color: rgba(220,218,148,0.8);
+}
+span.datetime{
+    display: inline-block;
+    width: 150px;
+    height: 44px;
+    text-align: center;
+    color: white;
+    font-size: 21px;
+    font-family: fangsong;
+    margin-left: 220px;
+    line-height: 50px;
+    vertical-align: bottom;
+}
+button.datatime-s{
+    display: inline-block;
+    background-color: rgba(36,220,119,0.85);
+    color:white;
+    font-size: 13px;
+    width: 82px;
+    height: 40px;
+    vertical-align: bottom;
+    border-radius: 4px;
+}
+button.datatime-x{
+    display: inline-block;
+    background-color: rgba(36,220,119,0.6);
+    color:white;
+    font-size: 13px;
+    width: 82px;
+    height: 40px;
+    vertical-align: bottom;
+    border-radius: 4px;
+}
+div.datetime{
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    background-color: #F2F0F5;
+    vertical-align: bottom;
+    border-radius: 4px;
+    line-height: 40px;
+}
+div.search{
+    width: 895px;
+    margin: 20px auto 0px auto;
+    color: white;
+    font-size: 15px;
+    font-family: fangsong;
+}
+div.search img{
+    vertical-align: bottom;
+    display: inline-block;
+    width: 45px;
+    height: 36px;
+}
+select{
+    border-radius: 6px;
+    background-color: rgba(220,219,209,0.7);
+}
+select.begin,select.end{
+    width: 200px;
+    height: 35px;
+}
+select.weekday{
+    width: 80px;
+    height: 35px;
+}
+select.time{
+    width: 80px;
+    height: 35px;
+}
+span.begintext{
+    margin-left: 50px;
+}
+div.tablebox{
+      border-radius: 3px;
+    width: 600px;
+    height: 400px;
+     margin: 0px auto 40px auto;
+     color: white;
+    border: 1px white solid;
+}
+div.listname{
+    width: 600px;
+    margin:0px auto;
+}
+div.listname span{
+    color: white;
+    font-family: fangsong;
+    margin-right: 170px;
+    font-size: 19px;
+}
+div.listname span:nth-child(2){
+    margin-right: 162px;
+}
+div.listname span:nth-child(3){
+    margin-right: 0px;
+}
+div.default{
+    width: 600px;
+    height: 50px;
+    font-family: fangsong;
+    font-size: 20px;
+    text-align: center;
+}
+div.final_item{
+    height: 40px;
+    font-size: 17px;
+    font-family: fangsong;
+    background-color: #F2F0F5;
+    color: black;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+div.final_item>div:nth-child(1){
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+div.final_item>div:nth-child(2){
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+div.final_item>div:nth-child(3){
+    display: inline-block;
+    width: 182px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+div.final_item>div:nth-child(3):hover{
+   box-shadow: 0px 0px 2px black;
+}
+div.userlist{
+    border-radius: 6px;
+     background-color: rgba(120,220,204,0.9);
+    z-index: 2;
+    width: 250px;
+    min-height: 50px;
+    max-height: 100px;
+    display: none;
+     position: absolute;
+    right: 0px;
+    font-family: cursive;
+    font-size: 15px;
+    top: 40px;
+}
+div.userlist_item{
+    overflow: hidden;
+    color: black;
+    width: 250px;
+    text-align: center;
+    height: 25px;
+
+}
+div.clicked~div.userlist{
+    display: inline-block;
+}
+div.clicked{
+    color: red;
+}
